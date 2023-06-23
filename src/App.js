@@ -1,21 +1,24 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Loginpage from "./components/Loginpage";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, createBrowserRouter } from "react-router-dom";
 function App() {
-  const goToLoginPage = () => {
-    console.log("Clicked");
-    <Router>
-      <Routes>
-        <Route exact path="./components/Loginpage" component={Loginpage} />
-      </Routes>
-    </Router>;
-  };
-
+  
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: {Navbar},
+    },
+    {
+      path: "/LoginPage",
+      element: {Loginpage},
+    },
+  ]);
   
   return (
     <>
-      <Navbar title="MySweetHome" link="Link" login={goToLoginPage} />
+    
+      <Navbar title="MySweetHome" link="Link" />
       {/* <Loginpage /> */}
     </>
   );
