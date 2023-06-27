@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import App from "../App";
+import { Link } from "react-router-dom";
+import loginPage from "./Loginpage";
 
 export default function Navbar(props) {
   return (
@@ -68,7 +70,7 @@ export default function Navbar(props) {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <Link className="btn btn-outline-success" type="submit" to="/LoginPage">
+            <Link className="btn btn-outline-success" type="submit" to="/loginPage">
              Login
             </Link>
           </form>
